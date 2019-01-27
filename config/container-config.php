@@ -18,8 +18,8 @@ $container['view'] = function (Container $container) {
 };
 
 
-$container['notFoundHandler'] = function ($container) {
-	return function ($request, $response) use ($container) {
-		return (new Response(StatusCode::HTTP_NOT_FOUND))->write('eeee');
-	};
-};
+//$container['notFoundHandler'] = function ($container) {
+//	return function ($request, $response) use ($container) {
+//		return $container->get('view')->render('error_404.twig')->withStatus(StatusCode::HTTP_NOT_FOUND);
+//	};
+//};
