@@ -2,5 +2,10 @@
 
 
 use NameSpaceTest\Controllers\ExampleController;
+use NameSpaceTest\Middleware\RemoveTrailingSlash;
 
-$app->get('/', ExampleController::class.':index');
+
+$app->add(new RemoveTrailingSlash());
+
+
+$app->get('/[{id:[0-9]+}]', ExampleController::class.':index');

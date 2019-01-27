@@ -3,15 +3,15 @@
 
 require 'vendor/autoload.php';
 
-require 'dotenv-config.php';
+require 'config/dotenv-config.php';
 
-$config = require 'slim-config.php';
+$config = require 'config/slim-config.php';
 
-require 'eloquent-config.php';
+require 'config/eloquent-config.php';
 
 $app = new Slim\App($config);
 
-require 'container-config.php';
+require 'config/container-config.php';
 
 require 'routes.php';
 

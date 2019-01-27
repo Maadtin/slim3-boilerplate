@@ -12,8 +12,8 @@ class ExampleController extends Controller
 
 
 
-	public function index (Request $request, Response $response) {
-		return 'Welcome';
+	public function index (Request $request, Response $response, $id = null) {
+		return '<h1>Welcome</h1>'. $id;
 	}
 
 
